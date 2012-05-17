@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Улица</b>
+  <%= @home.address %>
+</p>
+
+<p>
+  <b>Номер дома</b>
+  <%= @home.home_number %>
+</p>
+
+<p>
+  <b>Описание:</b>
+  <%= @home.description %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_home_path(@home) %> |
+<%= link_to 'Назад', homes_path %>

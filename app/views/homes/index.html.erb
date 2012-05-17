@@ -1,0 +1,25 @@
+<%= link_to 'Добавить дом', new_home_path %> 
+<table  width="80%" align="center" border="2px" bordercolor="grey" cellpadding="5px" 
+       cellspacing="0">
+  <tr>
+    <th>Улица</th>
+    <th>Номер дома</th>
+    <th>Описание</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @homes.each do |home| %>
+  <tr>
+    <td align="center"><%= home.address %></td>
+    <td align="center"><%= home.home_number %></td>
+    <td width= "70%", align="center"><%= home.description %></td>
+    <td><%= link_to 'Редактировать', edit_home_path(home) %></td>
+    <td><%= link_to 'Удалить', home, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
